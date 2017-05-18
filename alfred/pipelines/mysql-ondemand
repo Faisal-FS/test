@@ -1,0 +1,35 @@
+job {
+    // Name of the pipeline to be created
+    name = "mysql-ondemand-thunderX"
+
+    // Type of pipeline periodic, on-demand and per-commit
+    pipeline_type = "on-demand"
+
+    // On-demand parameters
+    ondemand_variables = "MYSQL_VERSION:mysql-5.7.16,SYSBENCH_VERSION:1.0"
+
+    // Name of Workload
+    workload = "mysql"
+
+    // Repos to be cloned for the pipeline
+    clone_repos = "ats"
+
+    // Alfred agents to be assigned to the pipeline
+    label = "mysql_agents"
+
+    // Scripts to be run in different stages
+    stage1_bootstrap     = "./common/bootstrap.sh --workload mysql"
+    stage2_PreCleanup    = "./common/cleanup.sh --workload mysql --soft"
+    stage3_BuildMySQL    = "./common/stage.sh --workload mysql --name build_mysql"
+    stage4_SetupMySQL    = "./common/stage.sh --workload mysql --name setup_mysql"
+    stage5_BuildSysbench = "./common/stage.sh --workload mysql --name build_sysbench"
+    stage6_SetupSysbench = "./common/stage.sh --workload mysql --name setup_sysbench"
+    stage7_RunTests      = "./mysql/tests/run_tests.sh"
+    stage8_PostCleanup   = "./common/cleanup.sh --workload mysql --soft"
+
+    // Alert build status of each job on specified email address
+    email = ""
+
+    // Common logs aggregation location for the job
+    artifacts = "logs/"
+}
