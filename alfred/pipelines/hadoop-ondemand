@@ -6,7 +6,7 @@ job {
     pipeline_type = "on-demand"
 
     // Variables for on-demand pipeline.
-    ondemand_variables = "HADOOP_BRANCH:master,HIBENCH_VERSION:6.0,JAVA_VERSION:8,PROTOBUF_VERSION:2.5.0,DFS_REPLICAS:1,SCALA_VERSION:2.12.1"
+    ondemand_variables = "HADOOP_BRANCH=master; HIBENCH_VERSION=6.0 ;JAVA_VERSION=8,9;PROTOBUF_VERSION=2.5.0;DFS_REPLICAS=1;SCALA_VERSION= 2.12.1"
 
     // Name of Workload
     workload = "hadoop"
