@@ -6,7 +6,7 @@ job {
     pipeline_type = "on-demand"
 
     // On-demand parameters
-    ondemand_variables = "MYSQL_VERSION:mysql-5.7.16,SYSBENCH_VERSION:1.0"
+    ondemand_variables = "MYSQL_VERSION=mysql-5.7.16;SYSBENCH_VERSION=1.0"
 
     // Name of Workload
     workload = "mysql"
