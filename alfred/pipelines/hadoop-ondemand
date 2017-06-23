@@ -6,7 +6,7 @@ job {
     pipeline_type = "on-demand"
 
     // On-demand parameters
-    ondemand_variables = "SNAP_COMPILE_ARGS=-mcpu""=vulcan"
+    ondemand_variables = "SNAP_COMPILE_ARGS='-mcpu=vulcan'"
 
     // Name of Workload
     workload = "snap"
