@@ -6,7 +6,7 @@ job {
     pipeline_type = "on-demand"
 
     // On-demand parameters
-    ondemand_variables = "SNAP_VERSION=June13; SNAP_NX=32; SNAP_NY=32; SNAP_NZ=48; SNAP_NPEY=1,1,2,2,4,4,8; SNAP_NPEZ=1,2,2,4,4,8,8; SNAP_COMPILE_ARGS=\-mcpu\=vulcan"
+    ondemand_variables = "SNAP_VERSION=June13; SNAP_NX=32; SNAP_NY=32; SNAP_NZ=48; SNAP_NPEY=1,1,2,2,4,4,8; SNAP_NPEZ=1,2,2,4,4,8,8; SNAP_COMPILE_ARGS='-mcpu=vulcan'"
 
     // Name of Workload
     workload = "snap"
